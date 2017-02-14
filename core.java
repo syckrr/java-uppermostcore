@@ -1,5 +1,11 @@
-  int btnsayi = rand.nextInt(10);
-            Button btn = new Button(getApplicationContext());
+//define a relativeview 
+int maxx= getWindowManager().getDefaultDisplay().getWidth()/2;
+int maxy= getWindowManager().getDefaultDisplay().getWidth()/2;
+int minx= getWindowManager().getDefaultDisplay().getWidth()/15;
+int miny= getWindowManager().getDefaultDisplay().getWidth()/15;
+  
+int btnsayi = rand.nextInt(10);
+            Button btn = new Button(getApplicationContext()); //we create a button in this lane bcz:if we don't do this in there and write in while loop,there is no starting x and y values
             btn.setId(1);
             btn.setTag(1);
             //btn.setTag(i);
@@ -11,11 +17,7 @@
             btn.setTranslationY(yy);
             btn.setWidth(5);//ywx
             btn.setHeight(100);//yhy
-            //btn.setMaxWidth(getWindowManager().getDefaultDisplay().getWidth());
-            rv.addView(btn);
-
-
-
+            rv.addView(btn); //look first lane
             tempx=yx;
             tempy=yy;
             temphy=yhy;
@@ -38,8 +40,7 @@
                 btn.setTranslationY(yy);
                 btn.setWidth(ywx);
                 btn.setHeight(yhy);
-                btn.setMaxWidth(getWindowManager().getDefaultDisplay().getWidth());
-                rv.addView(btn);
+                rv.addView(btn); //look first line
                 tempx=yx;
                 tempy=yy;
                 temphy=yhy;
